@@ -1,0 +1,37 @@
+.converter {
+  margin: -100px auto;
+  padding: 40px 20px;
+  max-width: 768px;
+  border-radius: 4px;
+  background-color: var(--converter-bc);
+  -webkit-box-shadow: 0 10px 20px 0 rgb(179 187 198 / 45%);
+  -moz-box-shadow: 0 10px 20px 0 rgb(179 187 198 / 45%);
+  box-shadow: 0 10px 20px 0 rgb(179 187 198 / 45%);
+
+  .svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__head {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 20px 0;
+    }
+  }
+
+  &__annotation {
+    margin-top: 26px;
+    font-size: 10px;
+    color: var(--txt-muted);
+  }
+}
