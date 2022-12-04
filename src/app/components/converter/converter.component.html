@@ -1,17 +1,42 @@
 <div class="converter">
-  <h3 class="converter__head">Euro to Ukraine Hryvnia</h3>
   <div class="converter__inputs">
     <div>
-      <app-dropdown></app-dropdown>
-      <app-text-input></app-text-input>
+      <select
+        [(ngModel)]="from"
+        (ngModelChange)="onSelection()"
+        *ngIf="currencyService.currencies as currencies"
+      >
+        <option *ngFor="let cur of currencies" value="{{ cur }}">
+          {{ cur }}
+        </option>
+      </select>
+      <input
+        [(ngModel)]="first"
+        (input)="onInput($event, 'first')"
+        class="input"
+        type="text"
+      />
     </div>
     <img class="svg" src="assets/svg/convert-arrows-icon.svg" />
     <div>
-      <app-dropdown></app-dropdown>
-      <app-text-input></app-text-input>
+      <select
+        [(ngModel)]="to"
+        (ngModelChange)="onSelection()"
+        *ngIf="currencyService.currencies as currencies"
+      >
+        <option *ngFor="let cur of currencies" value="{{ cur }}">
+          {{ cur }}
+        </option>
+      </select>
+      <input
+        [(ngModel)]="second"
+        (input)="onInput($event, 'second')"
+        class="input"
+        type="text"
+      />
     </div>
   </div>
   <p class="converter__annotation">
-    This currency converter use PrivatBank API
+    This currency converter use Currency Exchange API by fyhao
   </p>
 </div>
