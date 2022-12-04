@@ -14,7 +14,6 @@ export class CurrencyService {
   constructor(private http: HttpClient) { }
 
   currencies: string[] = []
-  courses: any[] = []
 
   getCurrencies(): Observable<string[]> {
     return this.http.get<string[]>(this.ALL_CURINCES, {
