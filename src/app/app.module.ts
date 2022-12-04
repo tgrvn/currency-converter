@@ -4,19 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ConverterComponent } from './components/converter/converter.component';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { TextInputComponent } from './components/text-input/text-input.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ConverterComponent,
-    DropdownComponent,
-    TextInputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,13 @@
 <header>
   <div class="wrapper">
     <h1>Currency convert</h1>
-
     <ul class="currency">
-      <li class="currency__current">€ 30.40/20.56</li>
-      <li class="currency__current">$ 30.40/20.56</li>
+      <li class="currency__current">
+        € {{ this.euro.name }}:{{ this.euro.course }}
+      </li>
+      <li class="currency__current">
+        $ {{ this.dollar.name }}:{{ this.dollar.course }}
+      </li>
     </ul>
   </div>
 </header>
